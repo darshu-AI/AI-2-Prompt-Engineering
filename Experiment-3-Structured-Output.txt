@@ -1,0 +1,39 @@
+AI-2 PROMPT ENGINEERING — EXPERIMENT 3: STRUCTURED OUTPUT (JSON)
+
+PROMPT:
+Extract the person's name, transaction date, and amount from the text.
+
+Return ONLY a valid JSON object using exactly these keys:
+- name: string
+- date: string in YYYY-MM-DD format
+- amount: number
+
+Rules:
+- Do not include Markdown code fences.
+- If a field is missing, use null.
+- Amount must be numeric without currency symbols.
+- Do not add any other keys.
+
+Text: [test input]
+
+TEST 1 INPUT: Priya paid Rs. 450 for books on 12 November 2026.
+ACTUAL OUTPUT: {"name": "Priya", "date": "2026-11-12", "amount": 450}
+
+TEST 2 INPUT: On 5 Oct 2026, Arun spent ₹1,250 on a keyboard.
+ACTUAL OUTPUT: {"name": "Arun", "date": "2026-10-05", "amount": 1250}
+
+TEST 3 INPUT: Meena's payment of 799 rupees was made yesterday, 18 November 2026.
+ACTUAL OUTPUT: {"name": "Meena", "date": "2026-11-18", "amount": 799}
+
+TEST 4 INPUT: On 20 November 2026, Rahul paid Rs. 2,000 for course fees.
+ACTUAL OUTPUT: {"name": "Rahul", "date": "2026-11-20", "amount": 2000}
+
+TEST 5 INPUT: A transaction of ₹350 was made by Kavi on 15 September 2026.
+ACTUAL OUTPUT: {"name": "Kavi", "date": "2026-09-15", "amount": 350}
+
+VALIDATION:
+All five had correct names, dates, numeric amounts, valid JSON syntax, and required fields.
+Success rate: (5 successful outputs / 5 tests) × 100 = 100%.
+
+LIMITATION:
+Only five test inputs were used, so this does not establish reliability for a broad range of text.

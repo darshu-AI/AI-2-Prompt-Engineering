@@ -1,0 +1,45 @@
+AI-2 PROMPT ENGINEERING — EXPERIMENT 1: ZERO-SHOT VS FEW-SHOT
+
+Task: Classify feedback as Positive, Negative, or Neutral.
+Input: "The application is easy to use, but it takes too long to load."
+
+ZERO-SHOT PROMPT:
+Classify the following customer feedback into one of these categories: Positive, Negative, or Neutral.
+
+Feedback: "The application is easy to use, but it takes too long to load."
+
+Return only the category and a one-line explanation.
+
+ACTUAL OUTPUT:
+Category: Neutral
+Explanation: The feedback balances a positive remark about ease of use with a negative complaint about slow loading times.
+
+FEW-SHOT PROMPT:
+Classify customer feedback into Positive, Negative, or Neutral.
+
+Examples:
+Feedback: "The delivery was fast and the product is excellent."
+Output: Positive
+Feedback: "The product stopped working after two days."
+Output: Negative
+Feedback: "The package arrived yesterday."
+Output: Neutral
+Feedback: "Customer support was helpful and resolved my issue."
+Output: Positive
+
+Now classify:
+Feedback: "The application is easy to use, but it takes too long to load."
+
+Return only:
+Category: [Positive/Negative/Neutral]
+Reason: [One short sentence]
+
+ACTUAL OUTPUT:
+Category: Neutral
+Reason: The feedback pairs praise for the application's ease of use with a complaint about its slow loading speed.
+
+COMPARISON:
+Both outputs classified it as Neutral. Both were correct for this input. Few-shot did not change the classification in this one test, but supplied examples and a response pattern.
+
+LIMITATION:
+Only one feedback example was tested. Experiments 1 and 2 were run in the same Gemini conversation, so earlier context may have influenced later responses.

@@ -1,0 +1,46 @@
+AI-2 PROMPT ENGINEERING — EXPERIMENT 2: DIRECT VS STEPWISE PROMPTING
+
+Problem:
+A student buys 3 notebooks at ₹40 each and 2 pens at ₹15 each. The shop gives a ₹20 discount on the total bill. The student pays ₹200. How much change should the student receive?
+
+DIRECT PROMPT:
+Solve the following problem directly. Give only the final answer and a brief explanation.
+
+A student buys 3 notebooks at ₹40 each and 2 pens at ₹15 each. The shop gives a ₹20 discount on the total bill. The student pays ₹200. How much change should the student receive?
+
+ACTUAL OUTPUT:
+Final Answer: ₹70
+Explanation: The cost of 3 notebooks (3 × ₹40 = ₹120) and 2 pens (2 × ₹15 = ₹30) totals ₹150. After applying the ₹20 discount, the final bill is ₹130, so paying ₹200 leaves ₹70 in change (₹200 − ₹130 = ₹70).
+
+STEPWISE PROMPT:
+Solve the problem carefully by breaking it into smaller steps. Calculate the cost of each item, find the total before discount, subtract the discount, and then calculate the change received. Check your final answer.
+
+A student buys 3 notebooks at ₹40 each and 2 pens at ₹15 each. The shop gives a ₹20 discount on the total bill. The student pays ₹200.
+
+Present the calculations clearly and give the final answer.
+
+ACTUAL OUTPUT:
+Step 1: Calculate the cost of each item
+Notebooks: 3 × ₹40 = ₹120
+Pens: 2 × ₹15 = ₹30
+
+Step 2: Find the total before discount
+Total before discount = ₹120 + ₹30 = ₹150
+
+Step 3: Subtract the discount
+Final bill after ₹20 discount = ₹150 − ₹20 = ₹130
+
+Step 4: Calculate the change received
+Change = Amount paid − Final bill = ₹200 − ₹130 = ₹70
+
+Step 5: Check the final answer
+Final bill (₹130) + Change (₹70) = ₹200 (matches the amount paid).
+Final bill (₹130) + Discount (₹20) = ₹150 (matches ₹120 + ₹30).
+
+Final Answer: The student should receive ₹70 in change.
+
+COMPARISON:
+Both prompts gave the correct answer ₹70. Direct prompting was concise; stepwise prompting showed intermediate calculations and checks. It improved transparency, not accuracy in this example, because the direct answer was already correct.
+
+LIMITATION:
+Both prompts were run in the same Gemini conversation, so previous context may have influenced the response.
